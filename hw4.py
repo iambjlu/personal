@@ -42,14 +42,14 @@ def clear():
     var.set(str(counter))
     pwm_led.ChangeDutyCycle(counter)
 
-def Entry():
+def setentry():
     global counter
     counter=(brightness.get())
     var.set(str(counter))
     pwm_led.ChangeDutyCycle(counter)
  
 brightness=tk.Entry(root,font=('Piboto',12))
-bset=tk.Button(root,text="-1",font=('Piboto',12),bg='#8aa294',fg='#22391F',width=8,height=1,command=Entry)
+bset=tk.Button(root,text="-1",font=('Piboto',12),bg='#8aa294',fg='#22391F',width=8,height=1,command=setentry)
 btn1=tk.Button(root,text="-1",font=('Piboto',12),bg='#8aa294',fg='#22391F',width=8,height=1,command=sub1)
 btn2=tk.Button(root,text="+1",font=('Piboto',12),bg='#8aa294',fg='#22391F',width=8,height=1,command=add1)
 btn3=tk.Button(root,text="Clear",font=('Piboto',12),bg='#8aa294',fg='#22391F',width=8,height=1,command=clear)
